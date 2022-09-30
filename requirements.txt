@@ -1,0 +1,7 @@
+django==4.0.7
+psycopg2-binary==2.8.6
+django-dotenv
+keras==2.10.0
+numpy==1.23.3
+tensorflow==2.10.0
+Pillow==9.2.0

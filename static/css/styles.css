@@ -1,0 +1,309 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    color: #333;
+    background-image: url("../images/deep-learning-1.jpg");
+    background-size: 100% 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro_inner {
+    width: 100%;
+    max-width: 880px;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.intro_suptitle {
+    font-size: 72px;
+    font-family: "Kaushan Script", cursive;
+    color: white;
+}
+
+.header {
+    width: 100%;
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    font-family: "Kaushan Script", cursive;
+    text-decoration: none;
+}
+
+.header_logo:hover {
+    text-decoration: none;
+    color: grey;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav_link {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.1s linear;
+    font-family: "Kaushan Script", cursive;
+}
+
+.nav_link.active {
+    color: grey;
+}
+
+.nav_link:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+.nav_link:after {
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity 0.1s linear;
+}
+
+.nav_link:hover:after,
+.nav_link.active:after {
+    opacity: 1;
+}
+
+.form_content {
+    margin-top: 1%;
+    margin-left: 0.5%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.upload_file {
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.model_choice {
+    font-size: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    width: 260px;
+    margin-left: 90px;
+    padding: 6px 12px;
+    font-family: "Kaushan Script", cursive;
+}
+
+.select-icon_2 {
+    position: absolute;
+    top: 3px;
+    left: 24.8%;
+    width: 30px;
+    height: 36px;
+    pointer-events: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.select-icon_1 {
+    position: absolute;
+    top: 3px;
+    left: 7%;
+    width: 30px;
+    height: 36px;
+    pointer-events: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.model_choice:hover,
+.model_choice:focus {
+    font-family: "Kaushan Script", cursive;
+    color: black;
+    background-color: grey;
+    border-color: black;
+}
+
+.my_class_1 {
+    border: 1px solid white;
+    color: white;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    width: 120px;
+    margin-left: 50px;
+    font-family: "Kaushan Script", cursive;
+}
+
+.my_class_1:hover,
+.my_class_1:focus {
+    font-family: "Kaushan Script", cursive;
+    color: black;
+    background-color: grey;
+    border-color: black;
+}
+
+.my_class_2 {
+    display: none;
+}
+
+.model_choice {
+}
+.file-name_1{
+    position: absolute;
+    top: 20px;
+    margin-left: 50px;
+}
+
+.file-name_2{
+    display: none;
+}
+.upload_file_btn {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-left: 30%;
+    width: 180px;
+    margin-top: 3%;
+    font-size: 20px;
+    border: 1px solid white;
+    transition-duration: 0.4s;
+    background-color: transparent;
+    border-radius: 5px;
+    font-family: "Kaushan Script", cursive;
+}
+
+.upload_file_btn:hover {
+    background-color: grey;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    border-color: black;
+}
+
+.uploaded_image {
+    width: 300px;
+    height: 300px;
+}
+
+figure {
+    margin-left: 6%;
+    margin-top: 1%;
+    display: inline-flex;
+    border: 4px solid white;
+}
+
+.model_prediction {
+    font-family: "Kaushan Script", cursive;
+    color: white;
+    font-size: 30px;
+    margin-left: 9%;
+}
+
+.not_right_prediction {
+    font-family: "Kaushan Script", cursive;
+    color: white;
+    font-size: 35px;
+    margin-left: 0.5%;
+}
+
+.info_from_user {
+    width: 10%;
+    height: 80%;
+    margin-top: 2%;
+    margin-left: 10%;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    border-radius: 8px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+
+.info_from_user_submit {
+    margin-left: 15px;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    border: 1px solid white;
+    font-family: "Kaushan Script", cursive;
+    transition-duration: 0.4s;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.info_from_user_submit:hover {
+    background-color: grey;
+    border-color: black;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.file-name_1{
+    margin-top: 3.5%;
+}
+
+
+
