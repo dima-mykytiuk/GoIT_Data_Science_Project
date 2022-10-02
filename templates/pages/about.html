@@ -1,0 +1,48 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&family=Roboto&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/style_for_about_page.css' %}">
+    <title>{{ title }}::About</title>
+</head>
+<body>
+<div class="about-section">
+    <div class="container">
+        <div class="header_inner">
+            <a class="header_logo" href="/">Image Classifier</a>
+        </div>
+    </div>
+    <div class="inner-container">
+        <h1 class="about_label">About</h1>
+        <p class="text">
+            Neural networks reflect the behavior of the human brain, allowing computer programs to recognize patterns
+            and solve common problems in the fields of AI, machine learning, and deep learning.<br>
+            <br>
+            Neural networks, also known as artificial neural networks (ANNs) or simulated neural networks (SNNs), are a
+            subset of machine learning and are at the heart of deep learning algorithms. Their name and structure are
+            inspired by the human brain, mimicking the way that biological neurons signal to one another.
+            Artificial neural networks (ANNs) are comprised of a node layers, containing an input layer, one or more
+            hidden layers, and an output layer. Each node, or artificial neuron, connects to another and has an
+            associated weight and threshold. If the output of any individual node is above the specified threshold
+            value, that node is activated, sending data to the next layer of the network. Otherwise, no data is passed
+            along to the next layer of the network.<br>
+            <br>
+            Neural networks rely on training data to learn and improve their accuracy over time. However, once these
+            learning algorithms are fine-tuned for accuracy, they are powerful tools in computer science and artificial
+            intelligence, allowing us to classify and cluster data at a high velocity. Tasks in speech recognition or
+            image recognition can take minutes versus hours when compared to the manual identification by human experts.
+            One of the most well-known neural networks is Google’s search algorithm.<br>
+            <br>
+            Neural networks can be classified into different types, which are used for different purposes. This site was
+            designed to process images and predict what is shown on them. At the moment, our neural networks can predict
+            such classes: Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, Truck.
+        </p>
+    </div>
+</div>
+</body>
+</html>
