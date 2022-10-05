@@ -17,7 +17,7 @@ services:
   makemigration:
     build: .
     container_name: django_makemigrations
-    command: bash -c "python manage.py makemigrations && python manage.py migrate"
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py collectstatic --no-input --clear"
     volumes:
       - .:/code
     depends_on:
