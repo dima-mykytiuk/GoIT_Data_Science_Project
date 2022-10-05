@@ -21,6 +21,6 @@ SECRET_KEY=testkey<br />
 4. Open in terminal project root where docker-compose.yml and paste this command: docker-compose build.
 5. Wait when docker-compose build will be finished and paste next command: docker-compose up.
 6. Now you can see that project is running and it is appear in docker application where u can start/stop server in future.
-7. And you can go in your browser in path: 127.0.0.1:8000 and classifie your images. <br />
+7. And you can go in your browser in path: 127.0.0.1:8000 and use classifier. <br />
 Here is Video Example with all this steps to run this project: <br />
 https://youtu.be/C29xnfGF3II
