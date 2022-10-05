@@ -9,8 +9,8 @@ The model's test accuracy score is 97.16% on [CIFAR-10](https://www.kaggle.com/c
 
 ### Installation
 1. You need to have pre installed IDE and Docker
-2. You need to create new project and clone project from git in your IDE
-3. You need to create .env file in project root and fill in the file like this example:<br />
+2. Create new project and clone project from git in your IDE
+3. Create .env file in project root and fill in the file like this example:<br />
 DB_NAME=ImageClassifier<br />
 DB_USER=postgres<br />
 DB_PASS=password<br />
