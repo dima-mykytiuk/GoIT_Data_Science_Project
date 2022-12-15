@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+Profile :: {{ block.super }}
+{% endblock %}
+
+{% block content %}
+{% if images|length < 4 %}
+<div class="profile_background_2">
+    {% else %}
+    <div class="profile_background">
+        {% endif %}
+        <div class="profile_header">Your Classifier History</div>
+        <div class="flex-row-container" style="margin-left: 3%; margin-right: 3%">
+            {% for image in images|slice:":8" %}
+            <div class="flex-row-item">
+                <img class="card-img-top" src="{{image.file_name.url}}"
+                     alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {% if image.model_prediction %}
+                        {% if image.info_from_user %}
+                        {{image.info_from_user}}
+                        {% else %}
+                        {{image.model_prediction}}
+                        {% endif %}
+                        {% else %}
+                        Not predicted
+                        {% endif %}
+                    </h5>
+                    <p class="card-text">Model prediction: {{image.model_prediction}}<br>
+                        Model type: {{image.model_type}}<br>
+                        Model right: {{image.predicted}}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">{{image.uploaded_at}}</small>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div id="spoiler" style="display:none">
+            <div class="flex-row-container" style="margin-left: 3%; margin-right: 3%">
+                {% for image in images|slice:"8:" %}
+                <div class="flex-row-item">
+                    <img class="card-img-top" src="{{image.file_name.url}}"
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            {% if image.model_prediction %}
+                            {% if image.info_from_user %}
+                            {{image.info_from_user}}
+                            {% else %}
+                            {{image.model_prediction}}
+                            {% endif %}
+                            {% else %}
+                            Not predicted
+                            {% endif %}
+                        </h5>
+                        <p class="card-text">Model prediction: {{image.model_prediction}}<br>
+                            Model type: {{image.model_type}}<br>
+                            Model right: {{image.predicted}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">{{image.uploaded_at}}</small>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% if images|length > 8 %}
+        <button class="show_all_btn" onclick="myFunction()">Show All</button>
+        {% endif %}
+    </div>
+    {% endblock %}

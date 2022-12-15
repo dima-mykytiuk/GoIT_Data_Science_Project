@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ block.super }}
+{% endblock %}
+{% block content %}
+<div class="background">
+    <div class="intro">
+        <div class="intro_inner">
+            <h2 class="intro_suptitle">Upload Image</h2>
+        </div>
+        <div class="form_content">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                <label class="my_class_{{ forloop.counter }}" for="{{ field.auto_id }}">{{ field.label }} </label>
+                <div class="select-icon_{{ forloop.counter }}">
+                    <img src="static/images/photo_{{ forloop.counter }}.ico" alt="gg">
+                </div>
+                <p class="file-name_{{ forloop.counter }}"></p>
+                {{ field }}
+                {% endfor %}
+                <button class="upload_file_btn" type="submit">Submit</button>
+            </form>
+        </div>
+        {% if image %}
+        <div>
+            <figure>
+                <img class="uploaded_image" src={{ image.file_name.url }}/>
+            </figure>
+            <h1 class="model_prediction">{% if result %} Result: {{ result }}, Accuracy: {{ accuracy }} {% else %}
+                Result: Invalid photo {% endif%}</h1>
+            {% if user.is_authenticated %}
+            <h1 class="not_right_prediction">Please tell us what you upload if prediction is not right</h1>
+            {% else %}
+            <h1 class="not_right_prediction"><span class="login_register_style">Register or Login to have access to image profile!</span><br>Please
+                tell us what you upload if prediction is not right</h1>
+            {% endif %}
+            <form method="post">
+                {% csrf_token %}
+                <div class="user_info">
+                    <input class="info_from_user" type="text" name="actual_picture">
+                    <button class="info_from_user_submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
