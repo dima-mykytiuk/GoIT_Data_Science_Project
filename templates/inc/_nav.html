@@ -3,7 +3,15 @@
         <div class="header_inner">
             <a class="header_logo" href="/">Image Classifier</a>
             <nav class="nav">
+                {% if user.is_authenticated %}
+                <a class="nav_link" href="{% url 'profile' %}">{{ user.username }}</a>
+                <a class="nav_link" href="{% url 'logout' %}">LogOut</a>
                 <a class="nav_link" href="{% url 'about' %}">About</a>
+                {% else %}
+                <a class="nav_link" href="{% url 'login' %}">LogIn</a>
+                <a class="nav_link" href="{% url 'registration' %}">Registration</a>
+                <a class="nav_link" href="{% url 'about' %}">About</a>
+                {% endif %}
             </nav>
         </div>
     </div>

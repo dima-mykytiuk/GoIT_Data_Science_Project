@@ -22,5 +22,5 @@ def image_classify(filename, model):
     if prediction[result] < 0.85:
         return ["Invalid photo"]
     else:
-        return [classes[result], f'{str(prediction[result])[:4]} accuracy']
+        return [classes[result], float(str(prediction[result])[:4])]
     

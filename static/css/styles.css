@@ -4,15 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    color: #333;
-    background-image: url("../images/deep-learning-1.jpg");
-    background-size: 100% 100%;
-}
-
 h1,
 h2,
 h3,
@@ -20,6 +11,25 @@ h4,
 h5,
 h6 {
     margin: 0;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
+    /*background-color: gray;*/
+}
+
+input {
+    width: 25%;
+    height: 35px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    border-radius: 8px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
 }
 
 .intro {
@@ -210,15 +220,17 @@ input[type="file"] {
 
 .model_choice {
 }
-.file-name_1{
+
+.file-name_1 {
     position: absolute;
     top: 20px;
     margin-left: 50px;
 }
 
-.file-name_2{
+.file-name_2 {
     display: none;
 }
+
 .upload_file_btn {
     display: flex;
     justify-content: center;
@@ -258,7 +270,8 @@ figure {
     font-family: "Kaushan Script", cursive;
     color: white;
     font-size: 30px;
-    margin-left: 9%;
+    margin-left: 5%;
+    margin-top: 1%;
 }
 
 .not_right_prediction {
@@ -266,13 +279,14 @@ figure {
     color: white;
     font-size: 35px;
     margin-left: 0.5%;
+    margin-top: 6%;
 }
 
 .info_from_user {
-    width: 10%;
+    width: 15%;
     height: 80%;
     margin-top: 2%;
-    margin-left: 10%;
+    margin-left: 5%;
     background-color: transparent;
     color: white;
     border: 3px solid white;
@@ -301,9 +315,165 @@ figure {
     cursor: pointer;
 }
 
-.file-name_1{
+.file-name_1 {
     margin-top: 3.8%;
 }
 
+.registration_form {
+    display: flex;
+    margin-left: 1%;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: transparent;
+    font-weight: bold;
+}
 
 
+.reg_title {
+    font-family: "Kaushan Script", cursive;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    margin-left: 8%;
+    font-size: 55px;
+}
+
+.reg_btn {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-left: 6%;
+    width: 220px;
+    margin-top: 3%;
+    font-size: 25px;
+    border: 1px solid white;
+    transition-duration: 0.4s;
+    background-color: transparent;
+    border-radius: 5px;
+    font-family: "Kaushan Script", cursive;
+}
+
+.reg_btn:hover {
+    background-color: grey;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    border-color: black;
+}
+
+.background {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    color: #333;
+    background-image: url("../images/deep-learning-1.jpg");
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.profile_header {
+    font-family: "Kaushan Script", cursive;
+    font-size: 45px;
+    width: 100%;
+    margin: 5% auto 50px;
+    text-align: center;
+    color: white;
+}
+
+.profile_header:after {
+    content: "";
+    position: absolute;
+    top: 185px;
+    left: 0;
+    right: 0;
+    height: 0.9em;
+    border-top: 2px solid white;
+}
+
+.flex-row-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    margin-top: 2%;
+}
+
+.flex-row-container > .flex-row-item {
+    margin-top: 40px;
+    width: 18rem;
+    border: 2px solid white;
+    border-radius: 5%;
+    color: white;
+}
+
+.card-img-top {
+    border-top-right-radius: 5% 5%;
+    border-top-left-radius: 5% 5%;
+    height: 18rem;
+    width: 17.75rem;
+}
+
+.profile_background {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    color: #333;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
+}
+
+.show_all_btn {
+    border: 1px solid black;
+    transition-duration: 0.4s;
+    background-color: white;
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    width: 10%;
+    margin-top: 2%;
+    margin-left: 42%;
+    margin-bottom: 2%;
+    text-align: center;
+    position: center;
+}
+
+.show_all_btn:hover {
+    background-color: grey;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.text-muted {
+    color: white !important;
+}
+
+.card-footer {
+    border-top: 1px solid white;
+}
+
+.login_title {
+    font-family: "Kaushan Script", cursive;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    margin-left: 8%;
+    font-size: 55px;
+}
+
+.login_register_style{
+    font-family: "Kaushan Script", cursive;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-left: 5%;
+}
+
+.profile_background_2 {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+}

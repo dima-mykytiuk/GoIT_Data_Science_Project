@@ -8,3 +8,4 @@ tensorflow-io
 Pillow==9.2.0
 keras_cv
 tensorflow_datasets
+django-crispy-forms
