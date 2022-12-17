@@ -23,8 +23,6 @@ class IndexView(View):
     
     def get(self, request, *args, **kwargs):
         neural_networks = NeuralModel.objects.all()
-        if not request.session or not request.session.session_key:
-            request.session.save()
         if len(neural_networks) == 0:
             with open("sgd_model.h5", 'rb') as file:
                 file_field = File(file)
@@ -47,6 +45,8 @@ class IndexView(View):
         return render(request, self.template_name, context=self.context)
     
     def post(self, request, *args, **kwargs):
+        if not request.session or not request.session.session_key:
+            request.session.save()
         if 'actual_picture' not in request.POST:
             file = request.FILES['choose_file']
             model = request.POST['model']
