@@ -279,7 +279,6 @@ figure {
     color: white;
     font-size: 35px;
     margin-left: 0.5%;
-    margin-top: 6%;
 }
 
 .info_from_user {
@@ -332,7 +331,7 @@ figure {
 
 .reg_title {
     font-family: "Kaushan Script", cursive;
-    margin-top: 10%;
+    margin-top: 7%;
     margin-bottom: 2%;
     margin-left: 8%;
     font-size: 55px;
